@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Bsma Coding School</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border " style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="courses.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <!--اللوجو-->
+        <h2 class="m-0 logo-header">
+            <img src="img/3-logo.png" alt="" class="logo-image">
+            Bsma Coding <br>School
+        </h2>
+        
+        <!--ايقون الترجمة -->
+        <a href="#" id="language-toggle" onclick="toggleLanguage()" class="language-toggle">
+            <div class="icon-container">
+                <i class="fa fa-globe"></i>
+            </div>
+            <div class="language-text">
+                <span id="language-text">عربي</span>
+            </div>
+        </a>
+        
+        <!--لاضافة أيقون الشراء فيما بعد-->
+        <div id="cart-container" class="cart-container" style="position: relative; display: inline-block; margin-left: 30px; cursor: pointer;">
+            <i class="fa fa-shopping-cart"></i>
+            <span id="cart-count" style="position: absolute; top: -8px; right: -10px; background: rgb(234, 90, 90); color: white; border-radius: 50%; padding: 2px 6px; font-size: 12px;">0</span>
+        </div> 
+
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--جزء الناف بار-->
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="index.html" class="nav-item nav-link active">Home</a>
+            <a href="about.html" class="nav-item nav-link">About</a>
+            <a href="courses.html" class="nav-item nav-link">Courses</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="team.html" class="dropdown-item">Our Team</a>
+                    <a href="FAQs.html" class="dropdown-item">FAQs</a>
+                </div>
+            </div>
+            <a href="blog.html" class="nav-item nav-link">Blog</a>
+            <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+
+        </div>
+        <!--زرار التسجيل-->
+        <a href="E:\e-learning\E-learning website\register.html" class="join-button py-3 px-lg-3 d-none d-lg-block">
+        Join Now
+            <i class="fa fa-arrow-right ms-3"></i>
+        </a>
+        
+    </div>
+</nav>
+<!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid  py-5 mb-5 page-header"style="background-image: url('img/Courses-1.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-3 text-white animated slideInDown">Courses</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a class="text-white" href="E:\e-learning\E-learning website\index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Courses</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Categories Start -->
+    <div class="container-xxl py-5 category">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center" style="font-weight: bold;"  px-3>Categories</h6>
+                <h1 class="mb-5">Courses Categories</h1>
+            </div>
+            <div class="row g-3">
+                <div class="col-lg-7 col-md-6">
+                    <div class="row g-3">
+                        <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <div class="position-relative">
+                                    <img class="img-fluid" src="img/web-1.png" alt="">
+                                    <div class="position-absolute top-0 start-0 w-100 h-100" ></div>
+                                </div>
+                                
+                                <div class="text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px; background-color: rgba(255, 255, 255, 0.5);">
+                                    <h5 class="m-0">Web Development</h5>
+                                    <small class="text-dark fw-bold">12 live Sessions</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <div class="position-relative">
+                                    <img class="img-fluid" src="img/scratch.jpeg" alt="">
+                                    <div class="position-absolute top-0 start-0 w-100 h-100" ></div>
+                                </div>
+                                
+                                <div class="text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px; background-color: rgba(255, 255, 255, 0.5);">
+                                    <h5 class="m-0">Scratch Course</h5>
+                                    <small class="text-dark fw-bold">12 live Sessions</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <div class="position-relative">
+                                    <img class="img-fluid" src="img/scratch jr.jpeg" alt="">
+                                    <div class="position-absolute top-0 start-0 w-100 h-100" ></div>
+                                </div>
+                                
+                                <div class="text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px; background-color: rgba(255, 255, 255, 0.5);">
+                                    <h5 class="m-0">Scratch Junior</h5>
+                                    <small class="text-dark fw-bold">12 live Sessions</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
+                    <a class="position-relative d-block h-100 overflow-hidden" href="">
+                        <div class="position-relative w-100 h-100">
+                            <img class="img-fluid position-absolute w-100 h-100" src="img/python.jpeg" alt="" style="object-fit: cover;">
+                            <div class="position-absolute top-0 start-0 w-100 h-100" ></div>
+                        </div>
+                        
+                        <div class="text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px; background-color: rgba(255, 255, 255, 0.5);">
+                            <h5 class="m-0">Python Basics</h5>
+                            <small class="text-dark fw-bold">12 live Sessions</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Categories Start -->
+
+
+    <!-- Courses Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center  px-3" style="font-weight: bold;" >Plans</h6>
+                <h4 class="mb-5">Select your child’s recommended learning path</h4>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item "style="background-color: rgba(216, 190, 244, 0.2);">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="img/plan1.png" alt="">
+                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                                <a href="#" class="flex-shrink-0 btn btn-sm custom-btn px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                                <a href="E:\e-learning\E-learning website\register.html" class="flex-shrink-0 btn btn-sm custom-btn px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4 pb-0 position-relative">
+                            <div class="ribbon">Available Now</div>
+                            <h3 class="mb-0">$149.00</h3>
+                            <div class="mb-3">
+                                <small class="fa fa-star" style="color: #986a8c;"></small>
+                                <small class="fa fa-star" style="color: #986a8c;"></small>
+                                <small class="fa fa-star" style="color: #986a8c;"></small>
+                                <small class="fa fa-star" style="color: #986a8c;"></small>
+                                <small class="fa fa-star" style="color: #986a8c;"></small>
+                            </div>
+                            <h5 class="mb-4">Course for Beginners</h5>
+                        </div>
+                        
+                        <div class="div-period">
+                            <p class="paragraph-1">3 months-&nbsp;12 live Classes</p>
+                        </div>
+                        <hr class="divider"> <!-- الخط الفاصل -->
+                        <div class="div-list">
+                            <ul>
+                                <li>Introduction to technology.</li>
+                                <li>Programming Basics Using Scratch Jr.</li>
+                            </ul>
+                        
+                            <!-- الأزرار -->
+                            <div class="buttons-container">
+                                <button class="age">KG1&2 &nbsp;||&nbsp; Grade 1 &nbsp;||&nbsp; Grade 2</button>
+
+                            </div>
+                        </div>
+
+                        <div class="div-list">
+                            <ul>
+                                <li>Introduction to technology.</li>
+                                <li>Programming Basics Using Scratch.</li>
+                            </ul>
+                        
+                            <!-- الأزرار -->
+                            <div class="buttons-container">
+                            <button class="age">Grade 3 &nbsp;||&nbsp; Grade 4 &nbsp;||&nbsp; Grade 5</button>
+
+                            </div>
+                        </div>
+
+                        <div class="div-list">
+                            <ul>
+                                <li>Introduction to technology.</li>
+                                <li>Programming Basics Using Scratch Jr.</li>
+                                <li>Introduction for Python.</li>
+                            </ul>
+                        
+                            <!-- الأزرار -->
+                            <div class="buttons-container">
+                            <button class="age">Grade 6 &nbsp;||&nbsp; Grade 7 &nbsp;||&nbsp; Grade 8</button>
+                            </div>
+                        </div>
+
+                        <div class="div-list">
+                            <ul>
+                                <li>Introduction to technology.</li>
+                                <li>Python Level one .</li>
+                                <li>Python level two .</li>
+                            </ul>
+                        
+                            <!-- الأزرار -->
+                            <div class="buttons-container">
+                        <button class="age">Grade 9 &nbsp;||&nbsp; Grade 10 &nbsp;||&nbsp; Grade 11</button>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie  me-2" style="color: #986a8c;"></i>zouhor</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock  me-2" style="color: #986a8c;"></i>24Hrs</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user me-2" style="color: #986a8c;"></i>20 Students</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="course-item "style="background-color: rgba(216, 190, 244, 0.2);">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="img/plan2.png" alt="">
+                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                                <a href="#" class="flex-shrink-0 btn btn-sm custom-btn px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                                <a href="E:\e-learning\E-learning website\register.html" class="flex-shrink-0 btn btn-sm custom-btn" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4 pb-0 position-relative">
+                            <div class="ribbon">Soon Waiting</div>
+                            <h3 class="mb-0">$149.00</h3>
+                            <div class="mb-3">
+                                <small class="fa fa-star " style="color: #986a8c;"></small>
+                                <small class="fa fa-star " style="color: #986a8c;"></small>
+                                <small class="fa fa-star"  style="color: #986a8c;"></small>
+                                <small class="fa fa-star " style="color: #986a8c;"></small>
+                                <small class="fa fa-star " style="color: #986a8c;"></small>
+                            </div>
+                            <h5 class="mb-4"> Course for Advanced </h5>
+                        </div>
+                        <div class="div-period">
+                            <p class="paragraph-1">6 months-&nbsp;24 live Classes</p>
+                        </div>
+                        <hr class="divider"> <!-- الخط الفاصل -->
+                        <div class="div-list">
+                            <ul>
+                                <li>Introduction to web Development.</li>
+                                <li>Introduction to UI\UX design.</li>
+                            </ul>
+                        
+                            <!-- الأزرار -->
+                            <div class="buttons-container">
+                                <button class="age">KG1&2 &nbsp;||&nbsp; Grade 1 &nbsp;||&nbsp; Grade 2</button>
+
+                            </div>
+                        </div>
+
+                        <div class="div-list">
+                            <ul>
+                                <li>Introduction to web Development</li>
+                                <li>Enhance problem-solving .</li>
+                            </ul>
+                        
+                            <!-- الأزرار -->
+                            <div class="buttons-container">
+                            <button class="age">Grade 3 &nbsp;||&nbsp; Grade 4 &nbsp;||&nbsp; Grade 5</button>
+                            </div>
+                        </div>
+
+                        <div class="div-list">
+                            <ul>
+                                <li>Details to web Development.</li>
+                                <li>Details to UI\UX design.</li>
+                                <li>Introduction to Game Development.</li>
+                            </ul>
+                        
+                            <!-- الأزرار -->
+                            <div class="buttons-container">
+                            <button class="age">Grade 6 &nbsp;||&nbsp; Grade 7 &nbsp;||&nbsp; Grade 8</button>
+                            </div>
+                        </div>
+
+                        <div class="div-list">
+                            <ul>
+                                <li>Details to Game Development.</li>
+                                <li>Enhance problem-solving .</li>
+                                <li>Details to web Development.</li>
+                            </ul>
+                        
+                            <!-- الأزرار -->
+                            <div class="buttons-container">
+                        <button class="age">Grade 9 &nbsp;||&nbsp; Grade 10 &nbsp;||&nbsp; Grade 11</button>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie  me-2"  style="color: #986a8c;"></i>zohour</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock  me-2"  style="color: #986a8c;"></i>48 Hrs</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user  me-2"  style="color: #986a8c;"></i>20 Students</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="course-item "style="background-color: rgba(216, 190, 244, 0.2);">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="img/plan3.png" alt="">
+                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                                <a href="#" class="flex-shrink-0 btn btn-sm custom-btn px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                                <a href="E:\e-learning\E-learning website\register.html" class="flex-shrink-0 btn btn-sm custom-btn px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4 pb-0 position-relative">
+                            <div class="ribbon">Soon Waiting</div>
+                            <h3 class="mb-0">$149.00</h3>
+                            <div class="mb-3">
+                                <small class="fa fa-star " style="color: #986a8c;"></small>
+                                <small class="fa fa-star " style="color: #986a8c;"></small>
+                                <small class="fa fa-star " style="color: #986a8c;"></small>
+                                <small class="fa fa-star " style="color: #986a8c;"></small>
+                                <small class="fa fa-star " style="color: #986a8c;"></small>
+                            </div>
+                            <h5 class="mb-4"> Course for Exepert</h5>
+                        </div>
+                        <div class="div-period">
+                            <p class="paragraph-1">12 months-&nbsp; 48 live Classes</p>
+                        </div>
+                        <hr class="divider"> <!-- الخط الفاصل -->
+                        <div class="div-list">
+                            <ul>
+                                <li>Introduction to technology.</li>
+                                <li>Programming Basics Using Scratch Jr.</li>
+                            </ul>
+                        
+                            <!-- الأزرار -->
+                            <div class="buttons-container">
+                                <button class="age">Grade 9 &nbsp;||&nbsp; Grade 10 &nbsp;||&nbsp; Grade 11</button>
+                            </div>
+                        </div>
+
+                        <div class="div-list">
+                            <ul>
+                                <li>Introduction to technology.</li>
+                                <li>Programming Basics Using Scratch.</li>
+                            </ul>
+                        
+                            <!-- الأزرار -->
+                            <div class="buttons-container">
+                                <button class="age">Grade 9 &nbsp;||&nbsp; Grade 10 &nbsp;||&nbsp; Grade 11</button>
+                            </div>
+                        </div>
+
+                        <div class="div-list">
+                            <ul>
+                                <li>Introduction to technology.</li>
+                                <li>Programming Basics Using Scratch Jr.</li>
+                                <li>Introduction for Python.</li>
+                            </ul>
+                        
+                            <!-- الأزرار -->
+                            <div class="buttons-container">
+                                <button class="age">Grade 9 &nbsp;||&nbsp; Grade 10 &nbsp;||&nbsp; Grade 11</button>
+                            </div>
+                        </div>
+
+                        <div class="div-list">
+                            <ul>
+                                <li>Introduction to technology.</li>
+                                <li>Python Level one .</li>
+                                <li>Python level two .</li>
+                            </ul>
+                        
+                            <!-- الأزرار -->
+                            <div class="buttons-container">
+                                <button class="age">Grade 9 &nbsp;||&nbsp; Grade 10 &nbsp;||&nbsp; Grade 11</button>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie  me-2"  style="color: #986a8c;"></i>zohour</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock  me-2"  style="color: #986a8c;"></i>96 Hrs</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user  me-2"  style="color: #986a8c;"></i>20 Students</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Courses End -->
+
+
+    <!-- Feedback Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="section-title bg-white text-center px-3" style="font-weight: bold;">Our Feedback</h6>
+                <h1 class="mb-5">Our Students Say!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel position-relative">
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/women.png" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Client Name</h5>
+                    <div class="testimonial-text text-center p-4"style="background-color: rgba(216, 190, 244, 0.2);">
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/men.png" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Client Name</h5>
+                    <div class="testimonial-text text-center p-4" style="background-color: rgba(216, 190, 244, 0.2);">
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/women.png" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Client Name</h5>
+                    <div class="testimonial-text text-center p-4" style="background-color: rgba(216, 190, 244, 0.2);">
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/men.png" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Client Name</h5>
+                    <div class="testimonial-text text-center p-4" style="background-color: rgba(216, 190, 244, 0.2);">
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feedback End -->
+        
+
+    <!-- Footer Start -->
+    <div class="container-fluid text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s" style="background-color:  #986a8c;">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3" style="text-shadow: rgb(193, 186, 186);" > Quick Links </h4>
+                    <a class="btn btn-link" href="E:\e-learning\E-learning website\about.html">About Us</a>
+                    <a class="btn btn-link" href="E:\e-learning\E-learning website\contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="">Privacy Policy</a>
+                    <!-- <a class="btn btn-link" href="">Terms & Condition</a> -->
+                    <a class="btn btn-link" href="E:\e-learning\E-learning website\FAQs.html">FAQs & Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>First District, New Beni Suef</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+01060048475</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>bsmacodingschool@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://wa.me/+01060048475" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=61566613091904"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Gallery</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/slide-1.png" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/slide-2.png" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/slide-1.png" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/scratch.jpeg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/scratch jr.jpeg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/About (2).jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">News</h4>
+                    <p>Register with us now, what are you waiting for!</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn custom-btn py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Bsma Coding School</a>, All Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com">Eng:Fayrouz Nasser</a><br><br>
+
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="E:\e-learning\E-learning website\index.html">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="E:\e-learning\E-learning website\FAQs.html">FQAs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

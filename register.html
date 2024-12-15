@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+.register-form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(135deg, rgba(152, 106, 140, 0.3), rgba(255, 240, 250, 0.5));
+
+        }
+
+.register-form h2 {
+    margin-bottom: 20px; 
+    text-align: center; 
+    color: #666464; 
+    font-size: 24px; 
+    font-weight: bold; 
+    letter-spacing: 1px; 
+    text-transform: uppercase; 
+} 
+.register-form h2:hover {
+    color: #986a8c; 
+    border-bottom-color: #986a8c; 
+    transform: scale(1.05); 
+    transition: all 0.3s ease; 
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 2px solid #ddd; 
+    font-size: 16px;
+    color: #333;
+    background: transparent; 
+    transition: all 0.3s ease; 
+    position: relative;
+    max-width: calc(100% - 20px);
+    margin-left: 10px;
+    max-width: 85%;
+    margin-right: auto;
+}
+
+.form-group input:focus {
+    border-bottom-color: #986a8c;
+    box-shadow: 0 2px 8px  #986a8c(76, 175, 80, 0.2); 
+    outline: none; 
+}
+
+.form-group input::placeholder {
+    color: #aaa;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.form-group input:hover {
+    border-bottom-color:  #986a8c; 
+    cursor: pointer; 
+}
+
+.form-group input:not(:placeholder-shown) {
+    border-bottom-color:  #986a8c; 
+    font-weight: bold;
+}
+
+.form-group input::after {
+    content: '';
+    display: block;
+    width: 80%; 
+    height: 2px;
+    background: #ddd;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus::after {
+    background:#986a8c;
+    width: 90%;
+}
+
+
+        .submit-btn {
+    background: linear-gradient(135deg, #a4869c, #986a8c);
+    color: #fff;
+    padding: 12px 20px; 
+    border: none;
+    border-radius: 8px; 
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease; 
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #a4869c, #986a8c); 
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+    </style>
+</head>
+<body>
+    <form class="register-form">
+        <h2>Register</h2>
+        <div class="form-group">
+            <label for="parent-name">Parent's Name</label>
+            <input type="text" id="parent-name" name="parent-name" placeholder="Enter parent's name" required>
+        </div>
+        <div class="form-group">
+            <label for="child-name">Child's Name</label>
+            <input type="text" id="child-name" name="child-name" placeholder="Enter child's name" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+        </div>
+        <div class="form-group">
+            <label for="child-age">Child's Age</label>
+            <input type="number" id="child-age" name="child-age" placeholder="Enter child's age" min="1" max="18" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter email address" required>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+</body>
+</html>
